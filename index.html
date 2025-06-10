@@ -403,7 +403,6 @@
         <div class="shape"></div>
         <div class="shape"></div>
         <div class="shape"></div>
-        <div class="shape"></div>
     </div>
 
     <header>
@@ -437,6 +436,161 @@
     <footer>
         <p>© 2025 Proyecto PrUN - Preparación UNAL | Hecho con ❤️ de estudiantes para estudiantes</p>
     </footer>
+
+    <script>
+        // Páginas de contenido
+        const pages = {
+            inicio: `
+                <div class="hero">
+                    <h1>Bienvenido a PrUN</h1>
+                    <p>Tu plataforma gratuita para preparar la admisión a la Universidad Nacional de Colombia</p>
+                    <a href="#materias" class="cta-button">
+                        <i class="fas fa-rocket"></i> Comenzar Preparación
+                    </a>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <i class="fas fa-book-open"></i>
+                        <h3>Material Gratuito</h3>
+                        <p>Accede a guías, ejercicios y material de estudio sin costo alguno</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-users"></i>
+                        <h3>Para Todos</h3>
+                        <p>Dirigido a estudiantes de colegios públicos y privados</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Calidad Garantizada</h3>
+                        <p>Material desarrollado por expertos en cada área</p>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Materias Cubiertas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Gratuito</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Disponible</span>
+                    </div>
+                </div>
+            `,
+            materias: `
+                <div class="content-section fade-in">
+                    <h2><i class="fas fa-book"></i>Materias de Estudio</h2>
+                    <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">
+                        Explora todas las áreas que se evalúan en la prueba de admisión UNAL
+                    </p>
+                    
+                    <div class="subjects-grid">
+                        <div class="subject-item">
+                            <i class="fas fa-calculator"></i>
+                            <h3>Matemáticas</h3>
+                            <p>Álgebra, geometría, trigonometría y cálculo</p>
+                        </div>
+                        <div class="subject-item">
+                            <i class="fas fa-book-reader"></i>
+                            <h3>Lectura Crítica</h3>
+                            <p>Comprensión lectora y análisis textual</p>
+                        </div>
+                        <div class="subject-item">
+                            <i class="fas fa-atom"></i>
+                            <h3>Ciencias Naturales</h3>
+                            <p>Física, química y biología</p>
+                        </div>
+                        <div class="subject-item">
+                            <i class="fas fa-globe-americas"></i>
+                            <h3>Ciencias Sociales</h3>
+                            <p>Historia, geografía y filosofía</p>
+                        </div>
+                        <div class="subject-item">
+                            <i class="fas fa-image"></i>
+                            <h3>Análisis de Imagen</h3>
+                            <p>Interpretación visual y análisis gráfico</p>
+                        </div>
+                        <div class="subject-item">
+                            <i class="fas fa-palette"></i>
+                            <h3>Pruebas Específicas</h3>
+                            <p>Preparación para programas de artes</p>
+                        </div>
+                    </div>
+                </div>
+            `,
+            tips: `
+                <div class="content-section fade-in">
+                    <h2><i class="fas fa-lightbulb"></i>Consejos para tu Preparación</h2>
+                    
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <h4><i class="fas fa-brain"></i> Bienestar Mental</h4>
+                            <p>Mantén una actitud positiva, practica técnicas de relajación y no te presiones demasiado. La confianza es clave.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4><i class="fas fa-clock"></i> Organización</h4>
+                            <p>Crea un cronograma de estudio realista. Dedica tiempo a cada materia y respeta tus horarios de descanso.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4><i class="fas fa-bed"></i> Descanso</h4>
+                            <p>Duerme al menos 7-8 horas diarias. Un cerebro descansado aprende y recuerda mejor la información.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4><i class="fas fa-dumbbell"></i> Actividad Física</h4>
+                            <p>Realiza ejercicio regularmente. Ayuda a reducir el estrés y mejora la concentración.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4><i class="fas fa-apple-alt"></i> Alimentación</h4>
+                            <p>Mantén una dieta equilibrada. Come frutas, verduras y mantente hidratado durante el estudio.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4><i class="fas fa-users"></i> Apoyo Social</h4>
+                            <p>Estudia con amigos, forma grupos de estudio y no dudes en pedir ayuda cuando la necesites.</p>
+                        </div>
+                    </div>
+                </div>
+            `,
+            contacto: `
+                <div class="content-section fade-in">
+                    <h2><i class="fas fa-envelope"></i>Contacto y Colaboración</h2>
+                    
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                            ¿Quieres colaborar con el proyecto o tienes sugerencias?
+                        </p>
+                        
+                        <div class="cards-grid">
+                            <div class="card">
+                                <i class="fas fa-handshake"></i>
+                                <h3>Colaboradores</h3>
+                                <p>Si eres docente o estudiante avanzado, únete a nuestro equipo de creadores de contenido</p>
+                            </div>
+                            <div class="card">
+                                <i class="fas fa-bug"></i>
+                                <h3>Reportar Errores</h3>
+                                <p>¿Encontraste un error en el contenido? Ayúdanos a mejorar reportándolo</p>
+                            </div>
+                            <div class="card">
+                                <i class="fas fa-star"></i>
+                                <h3>Sugerencias</h3>
+                                <p>Tus ideas son valiosas para hacer de PrUN una mejor plataforma</p>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 3rem;">
+                            <a href="mailto:proyecto.prun@gmail.com" class="cta-button">
+                                <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `
+        };
 
         // Función para cargar páginas
         function loadPage(page) {
