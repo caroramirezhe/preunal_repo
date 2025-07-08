@@ -518,64 +518,44 @@
                 </div>`
             ,
             materias: 
-`<div class="content-section fade-in">
-                    <h2><i class="fas fa-book"></i>English help</h2>
-                    <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">
-                        Did you know that once you join the university, you might take an exam to analize your english level?
-                      And if you need to nivelate, you must take classes about that...
-                    </p>
-                    
-                    <div class="subjects-grid">
-                        <div class="subject-item">
-                            <i class="fas fa-book-reader"></i>
-                            <h3>English</h3>
-                            <p>Click here to start
-                            improving your english before you enter, so you don't have to spend time with english nivelation!</p>
-                        </div>
-            
-                    </div>
-                </div>
-                
-
-<div class="content-section fade-in">
-                    <h2><i class="fas fa-book"></i>Areas de Estudio</h2>
-                    <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">
-                        Explora todas las áreas y materias específicas que se evalúan en la prueba de admisión UNAL
-                    </p>
-                    
-                    <div class="subjects-grid">
-                        <div class="subject-item">
-                            <i class="fas fa-calculator"></i>
-                            <h3>Matemáticas</h3>
-                            <p>Álgebra, geometría, trigonometría y cálculo</p>
-                        </div>
-                        <div class="subject-item">
-                            <i class="fas fa-book-reader"></i>
-                            <h3>Lectura Crítica</h3>
-                            <p>Comprensión lectora y análisis textual</p>
-                        </div>
-                        <div class="subject-item">
-                            <i class="fas fa-atom"></i>
-                            <h3>Ciencias Naturales</h3>
-                            <p>Física, química y biología</p>
-                        </div>
-                        <div class="subject-item">
-                            <i class="fas fa-globe-americas"></i>
-                            <h3>Ciencias Sociales</h3>
-                            <p>Historia, geografía y filosofía</p>
-                        </div>
-                        <div class="subject-item">
-                            <i class="fas fa-image"></i>
-                            <h3>Análisis de Imagen</h3>
-                            <p>Interpretación visual y análisis gráfico</p>
-                        </div>
-                        <div class="subject-item">
-                            <i class="fas fa-palette"></i>
-                            <h3>Pruebas Específicas</h3>
-                            <p>Preparación para programas de artes</p>
-                        </div>
-                    </div>
-                </div>`
+`<div class="subjects-grid">
+    <div class="subject-item" onclick="location.hash='#english_help'">
+        <i class="fas fa-book-reader"></i>
+        <h3>English</h3>
+        <p>Click here to start improving your english before you enter, so you don't have to spend time with english nivelation!</p>
+    </div>
+    <div class="subject-item" onclick="location.hash='#matematicas'">
+        <i class="fas fa-calculator"></i>
+        <h3>Matemáticas</h3>
+        <p>Álgebra, geometría, trigonometría y cálculo</p>
+    </div>
+    <div class="subject-item" onclick="location.hash='#lectura'">
+        <i class="fas fa-book-reader"></i>
+        <h3>Lectura Crítica</h3>
+        <p>Comprensión lectora y análisis textual</p>
+    </div>
+    <div class="subject-item" onclick="location.hash='#naturales'">
+        <i class="fas fa-atom"></i>
+        <h3>Ciencias Naturales</h3>
+        <p>Física, química y biología</p>
+    </div>
+    <div class="subject-item" onclick="location.hash='#sociales'">
+        <i class="fas fa-globe-americas"></i>
+        <h3>Ciencias Sociales</h3>
+        <p>Historia, geografía y filosofía</p>
+    </div>
+    <div class="subject-item" onclick="location.hash='#imagen'">
+        <i class="fas fa-image"></i>
+        <h3>Análisis de Imagen</h3>
+        <p>Interpretación visual y análisis gráfico</p>
+    </div>
+    <div class="subject-item" onclick="location.hash='#artes'">
+        <i class="fas fa-palette"></i>
+        <h3>Pruebas Específicas</h3>
+        <p>Preparación para programas de artes</p>
+    </div>
+</div>
+`
             ,
             tips: 
                 `<div class="content-section fade-in">
@@ -643,6 +623,84 @@
                         </div>
                     </div>
                 </div>`
+                    matematicas: `
+        <div class="content-section fade-in">
+            <h2><i class="fas fa-calculator"></i> Matemáticas</h2>
+            <p style="text-align:center; font-size:1.1rem; margin-bottom:2rem;">
+                Refuerza tus conocimientos en álgebra, geometría, trigonometría y cálculo para el examen de admisión.
+            </p>
+            <div class="tips-grid">
+                <div class="tip-card"><h4>Álgebra</h4><p>Potenciación, factorización, ecuaciones, inecuaciones...</p></div>
+                <div class="tip-card"><h4>Geometría</h4><p>Figuras planas, cuerpos geométricos, áreas y perímetros.</p></div>
+                <div class="tip-card"><h4>Trigonometría</h4><p>Razones trigonométricas, ángulos, identidad pitagórica.</p></div>
+                <div class="tip-card"><h4>Cálculo</h4><p>Límites, derivadas, interpretación de gráficas.</p></div>
+            </div>
+        </div>`,
+
+        lectura: `
+        <div class="content-section fade-in">
+            <h2><i class="fas fa-book-reader"></i> Lectura Crítica</h2>
+            <p style="text-align:center; font-size:1.1rem; margin-bottom:2rem;">
+                Mejora tu comprensión lectora y tus habilidades analíticas para entender y argumentar textos complejos.
+            </p>
+            <div class="tips-grid">
+                <div class="tip-card"><h4>Comprensión literal</h4><p>Identificación de ideas principales, secuencia de eventos.</p></div>
+                <div class="tip-card"><h4>Inferencias</h4><p>Lectura entre líneas, deducciones e implicaciones.</p></div>
+                <div class="tip-card"><h4>Argumentación</h4><p>Evaluación crítica, intención del autor, tipos de texto.</p></div>
+            </div>
+        </div>`,
+
+        naturales: `
+        <div class="content-section fade-in">
+            <h2><i class="fas fa-atom"></i> Ciencias Naturales</h2>
+            <p style="text-align:center; font-size:1.1rem; margin-bottom:2rem;">
+                Revisa los temas clave de física, química y biología que suelen aparecer en la prueba.
+            </p>
+            <div class="tips-grid">
+                <div class="tip-card"><h4>Física</h4><p>Cinemática, leyes de Newton, energía y trabajo.</p></div>
+                <div class="tip-card"><h4>Química</h4><p>Elementos, compuestos, reacciones químicas.</p></div>
+                <div class="tip-card"><h4>Biología</h4><p>Célula, genética, evolución, sistemas del cuerpo humano.</p></div>
+            </div>
+        </div>`,
+
+        sociales: `
+        <div class="content-section fade-in">
+            <h2><i class="fas fa-globe-americas"></i> Ciencias Sociales</h2>
+            <p style="text-align:center; font-size:1.1rem; margin-bottom:2rem;">
+                Estudia historia, geografía y filosofía con enfoque crítico.
+            </p>
+            <div class="tips-grid">
+                <div class="tip-card"><h4>Historia</h4><p>Procesos sociales, independencia, guerras mundiales.</p></div>
+                <div class="tip-card"><h4>Geografía</h4><p>Relieve, clima, ubicación espacial, conflictos territoriales.</p></div>
+                <div class="tip-card"><h4>Filosofía</h4><p>Pensadores clásicos, dilemas éticos, razonamiento lógico.</p></div>
+            </div>
+        </div>`,
+
+        imagen: `
+        <div class="content-section fade-in">
+            <h2><i class="fas fa-image"></i> Análisis de Imagen</h2>
+            <p style="text-align:center; font-size:1.1rem; margin-bottom:2rem;">
+                Interpreta imágenes, gráficos, mapas y relaciones visuales.
+            </p>
+            <div class="tips-grid">
+                <div class="tip-card"><h4>Interpretación Visual</h4><p>Identifica símbolos, colores, y mensajes implícitos.</p></div>
+                <div class="tip-card"><h4>Gráficas</h4><p>Lee e interpreta gráficos de barras, líneas y circulares.</p></div>
+                <div class="tip-card"><h4>Mapas</h4><p>Ubicación, coordenadas, escalas, y relaciones espaciales.</p></div>
+            </div>
+        </div>`,
+
+        artes: `
+        <div class="content-section fade-in">
+            <h2><i class="fas fa-palette"></i> Pruebas Específicas de Artes</h2>
+            <p style="text-align:center; font-size:1.1rem; margin-bottom:2rem;">
+                Información clave para quienes desean entrar a programas como Música, Artes Plásticas o Cine.
+            </p>
+            <div class="tips-grid">
+                <div class="tip-card"><h4>¿Qué evalúan?</h4><p>Creatividad, técnica, comprensión estética, portafolio.</p></div>
+                <div class="tip-card"><h4>Preparación previa</h4><p>Revisa qué materiales necesitas y cómo presentar tus ideas.</p></div>
+                <div class="tip-card"><h4>Consejos</h4><p>Relájate, expresa tu esencia, ¡y no subestimes tu talento!</p></div>
+            </div>
+        </div>`
             
         };
 
