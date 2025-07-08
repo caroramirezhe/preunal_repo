@@ -395,6 +395,40 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    }
+    
+    .modal-content {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        max-width: 800px;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+    }
+    
+    .close-button {
+        position: absolute;
+        top: 1rem;
+        right: 1.2rem;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #667eea;
+    }
+
     </style>
 </head>
 <body>
@@ -699,6 +733,12 @@
                 <div class="tip-card"><h4>Preparación previa</h4><p>Revisa qué materiales necesitas y cómo presentar tus ideas.</p></div>
                 <div class="tip-card"><h4>Consejos</h4><p>Relájate, expresa tu esencia, ¡y no subestimes tu talento!</p></div>
             </div>
+            <div class="subject-item" onclick="abrirModal(testimonioSilvana)">
+    <i class="fas fa-microphone-alt"></i>
+    <h3>Testimonio: Silvana Valderrama - Admitida 2024-1</h3>
+    <p>Prueba específica de Artes Plásticas</p>
+</div>
+
         </div>`
             
         };
@@ -784,6 +824,39 @@
                 observer.observe(el);
             });
         });
+        // Funciones para abrir/cerrar el modal
+function abrirModal(html) {
+    document.getElementById("modal-body").innerHTML = html;
+    document.getElementById("modalEntrevista").style.display = "flex";
+}
+
+function cerrarModal() {
+    document.getElementById("modalEntrevista").style.display = "none";
+}
+
+// Contenido de testimonios y entrevistas
+const testimonioSilvana = `
+    <h2><i class='fas fa-user'></i> Silvana Valderrana – Artes Plásticas 2024-1</h2>
+    <p>“...”</p>
+    <audio controls>
+        <source src="audios/Silvana1.oga" type="audio/ogg">
+    </audio>
+    <audio controls>
+        <source src="audios/Silvana2.oga" type="audio/ogg">
+    </audio>
+    <audio controls>
+        <source src="audios/Silvana3.oga" type="audio/ogg">
+    </audio>`;
     </script>
+    <!-- Modal de entrevista -->
+<div id="modalEntrevista" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-button" onclick="cerrarModal()">&times;</span>
+        <div id="modal-body">
+            <!-- Aquí se cargará el contenido dinámicamente -->
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
