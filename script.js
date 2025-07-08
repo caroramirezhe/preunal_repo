@@ -1,42 +1,18 @@
 function loadPage(page) {
-  const loading = document.getElementById("loading");
-  const content = document.getElementById("content");
-
-  loading.style.display = "block";
-  content.style.display = "none";
-
-  fetch(`pages/${page}.html`)
-    .then(response => {
-      if (!response.ok) throw new Error("No encontrado");
-      return response.text();
-    })
+  fetch(pages/${page}.html)
+    .then(response => response.text())
     .then(html => {
-      content.innerHTML = html;
-      loading.style.display = "none";
-      content.style.display = "block";
-      updateActiveNav(page);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.getElementById("content").innerHTML = html;
     })
     .catch(() => {
-      content.innerHTML = "<p style='color: white;'>Página no encontrada.</p>";
-      loading.style.display = "none";
-      content.style.display = "block";
+      document.getElementById("content").innerHTML = "<p>Página no encontrada.</p>";
     });
 }
 
+// Detecta el hash actual o carga 'inicio' por defecto
 function router() {
   const page = location.hash.substring(1) || "inicio";
   loadPage(page);
-}
-
-function updateActiveNav(currentPage) {
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${currentPage}`) {
-      link.classList.add('active');
-    }
-  });
 }
 
 window.addEventListener("hashchange", router);
