@@ -629,6 +629,244 @@ audio {
             line-height: 1.6;
         }
 
+                .quiz-container {
+            padding: 40px;
+        }
+
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .quiz-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .question-container {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .question-number {
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .question-category {
+            background: #e9ecef;
+            color: #495057;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+
+        .question-text {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .options {
+            display: grid;
+            gap: 15px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .option.selected {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+
+        .option.correct {
+            border-color: #28a745;
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .option.incorrect {
+            border-color: #dc3545;
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .option input[type="radio"] {
+            margin-right: 15px;
+            transform: scale(1.2);
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #218838;
+        }
+
+        .timer {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+
+        .results {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .score {
+            font-size: 3em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .explanation {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .explanation h4 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .feedback {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .feedback.correct {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .feedback.incorrect {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        @media (max-width: 768px) {
+            .quiz-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .question-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .controls {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
 
     </style>
 </head>
@@ -858,8 +1096,92 @@ audio {
                     </div>
                 </div>`,
                     matematicas: `
+
+                    
+    <div class="container">
+        <div class="header">
+            <h1>
+                <span style="font-size: 1.2em;">🧮</span>
+                Simulacro de Matemáticas
+            </h1>
+            <p>Prepárate para el examen de admisión UNAL</p>
+        </div>
+        
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div class="quiz-info">
+                    <div>
+                        <strong>Preguntas:</strong> <span id="total-questions">10</span>
+                    </div>
+                    <div>
+                        <strong>Tiempo:</strong> <span id="timer" class="timer">15:00</span>
+                    </div>
+                    <div>
+                        <strong>Progreso:</strong> <span id="progress">0/10</span>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div id="quiz-content">
+                <div class="question-container" id="question-container">
+                    <div class="question-header">
+                        <div style="display: flex; align-items: center;">
+                            <span class="question-number" id="question-number">Pregunta 1</span>
+                            <span class="question-category" id="question-category">Álgebra</span>
+                        </div>
+                    </div>
+                    
+                    <div class="question-text" id="question-text">
+                        Si 3x + 2 = 14, ¿cuál es el valor de x?
+                    </div>
+                    
+                    <div class="options" id="options">
+                        <div class="option" onclick="selectOption(0)">
+                            <input type="radio" name="answer" id="option0">
+                            <label for="option0">A) 4</label>
+                        </div>
+                        <div class="option" onclick="selectOption(1)">
+                            <input type="radio" name="answer" id="option1">
+                            <label for="option1">B) 4.5</label>
+                        </div>
+                        <div class="option" onclick="selectOption(2)">
+                            <input type="radio" name="answer" id="option2">
+                            <label for="option2">C) 5</label>
+                        </div>
+                        <div class="option" onclick="selectOption(3)">
+                            <input type="radio" name="answer" id="option3">
+                            <label for="option3">D) 6</label>
+                        </div>
+                    </div>
+
+                    <div class="feedback" id="feedback">
+                        <strong>¡Correcto!</strong> Para resolver: 3x + 2 = 14 → 3x = 12 → x = 4
+                    </div>
+                </div>
+            </div>
+
+            <div class="results" id="results">
+                <h2>¡Simulacro Completado!</h2>
+                <div class="score" id="final-score">8/10</div>
+                <p>Has respondido correctamente <span id="correct-answers">8</span> de <span id="total-questions-result">10</span> preguntas.</p>
+                <div style="margin-top: 20px;">
+                    <div class="btn btn-primary" onclick="restartQuiz()">Reintentar</div>
+                    <div class="btn btn-secondary" onclick="reviewAnswers()">Revisar Respuestas</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-secondary" id="prev-btn" onclick="previousQuestion()" disabled>Anterior</button>
+                <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()">Siguiente</button>
+                <button class="btn btn-success hidden" id="finish-btn" onclick="finishQuiz()">Finalizar</button>
+            </div>
+        </div>
+    </div>
+    
         <div class="content-section fade-in">
-            <h2><i class="fas fa-calculator"></i> Matemáticas</h2>
             <p style="text-align:center; font-size:1.1rem; margin-bottom:2rem;">
                 Refuerza tus conocimientos en álgebra, geometría, trigonometría y cálculo para el examen de admisión.
             </p>
@@ -1124,18 +1446,8 @@ audio {
                 <div class="cards-grid">
                     <div class="card">
                         <i class="fas fa-quote-left"></i>
-                        <h4>Prof. Ana Martínez</h4>
-                        <p>"La técnica se puede enseñar, pero la creatividad y la pasión son lo que realmente importa. Muestra tu personalidad en cada trabajo."</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-quote-left"></i>
-                        <h4>Prof. Diego Ruiz</h4>
-                        <p>"No se trata de ser perfecto, sino de demostrar que tienes algo que decir y la capacidad de expresarlo a través del arte."</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-quote-left"></i>
-                        <h4>Prof. Carmen López</h4>
-                        <p>"Practica constantemente, pero también aprende a observar el mundo que te rodea. El arte nace de la observación y la reflexión."</p>
+                        <h4>Proóximamente</h4>
+                        <p>Próximamente habrá consejos aquí</p>
                     </div>
                 </div>
             </div>
@@ -1269,9 +1581,221 @@ function cerrarModal() {
     document.getElementById("modalEntrevista").style.display = "none";
 }
 
+        const questions = [
+            {
+                category: "Álgebra",
+                question: "Si 3x + 2 = 14, ¿cuál es el valor de x?",
+                options: ["A) 4", "B) 4.5", "C) 5", "D) 6"],
+                correct: 0,
+                explanation: "Para resolver: 3x + 2 = 14 → 3x = 12 → x = 4"
+            },
+            {
+                category: "Geometría",
+                question: "¿Cuál es el área de un círculo con radio 5 cm?",
+                options: ["A) 25π cm²", "B) 10π cm²", "C) 25 cm²", "D) 50π cm²"],
+                correct: 0,
+                explanation: "El área de un círculo es A = πr². Con r = 5: A = π(5)² = 25π cm²"
+            },
+            {
+                category: "Álgebra",
+                question: "¿Cuál es el resultado de (x + 3)²?",
+                options: ["A) x² + 6x + 9", "B) x² + 3x + 9", "C) x² + 6x + 6", "D) x² + 9"],
+                correct: 0,
+                explanation: "(x + 3)² = (x + 3)(x + 3) = x² + 3x + 3x + 9 = x² + 6x + 9"
+            },
+            {
+                category: "Trigonometría",
+                question: "¿Cuál es el valor de sen(30°)?",
+                options: ["A) 1/2", "B) √3/2", "C) 1", "D) √2/2"],
+                correct: 0,
+                explanation: "El seno de 30° es 1/2. Es uno de los valores trigonométricos básicos."
+            },
+            {
+                category: "Cálculo",
+                question: "¿Cuál es la derivada de f(x) = 3x²?",
+                options: ["A) 6x", "B) 3x", "C) 6x²", "D) 3"],
+                correct: 0,
+                explanation: "La derivada de 3x² es 6x, aplicando la regla de potencias: d/dx(axⁿ) = naxⁿ⁻¹"
+            },
+            {
+                category: "Álgebra",
+                question: "Si 2x - 5 = 3x + 1, ¿cuál es el valor de x?",
+                options: ["A) -6", "B) -4", "C) 4", "D) 6"],
+                correct: 0,
+                explanation: "2x - 5 = 3x + 1 → 2x - 3x = 1 + 5 → -x = 6 → x = -6"
+            },
+            {
+                category: "Geometría",
+                question: "¿Cuál es el volumen de un cubo con arista de 3 cm?",
+                options: ["A) 27 cm³", "B) 9 cm³", "C) 18 cm³", "D) 12 cm³"],
+                correct: 0,
+                explanation: "El volumen de un cubo es V = a³. Con a = 3: V = 3³ = 27 cm³"
+            },
+            {
+                category: "Trigonometría",
+                question: "¿Cuál es el valor de cos(60°)?",
+                options: ["A) 1/2", "B) √3/2", "C) 1", "D) √2/2"],
+                correct: 0,
+                explanation: "El coseno de 60° es 1/2. Es uno de los valores trigonométricos fundamentales."
+            },
+            {
+                category: "Cálculo",
+                question: "¿Cuál es el límite de (x² - 4)/(x - 2) cuando x tiende a 2?",
+                options: ["A) 4", "B) 2", "C) 0", "D) No existe"],
+                correct: 0,
+                explanation: "Factorizando: (x² - 4)/(x - 2) = (x + 2)(x - 2)/(x - 2) = x + 2. Cuando x → 2: 2 + 2 = 4"
+            },
+            {
+                category: "Álgebra",
+                question: "¿Cuál es el resultado de √(16 + 9)?",
+                options: ["A) 5", "B) 7", "C) 4", "D) 25"],
+                correct: 0,
+                explanation: "√(16 + 9) = √25 = 5"
+            }
+        ];
+
+        let currentQuestion = 0;
+        let userAnswers = [];
+        let timer;
+        let timeLeft = 15 * 60; // 15 minutos en segundos
+
+        function startTimer() {
+            timer = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                if (timeLeft <= 0) {
+                    finishQuiz();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeLeft <= 60) {
+                document.getElementById('timer').style.color = '#dc3545';
+            }
+        }
+
+        function loadQuestion() {
+            const question = questions[currentQuestion];
+            document.getElementById('question-number').textContent = `Pregunta ${currentQuestion + 1}`;
+            document.getElementById('question-category').textContent = question.category;
+            document.getElementById('question-text').textContent = question.question;
+            
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.innerHTML = '';
+            
+            question.options.forEach((option, index) => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'option';
+                optionElement.onclick = () => selectOption(index);
+                optionElement.innerHTML = `
+                    <input type="radio" name="answer" id="option${index}">
+                    <label for="option${index}">${option}</label>
+                `;
+                optionsContainer.appendChild(optionElement);
+            });
+            
+            // Restaurar respuesta anterior si existe
+            if (userAnswers[currentQuestion] !== undefined) {
+                selectOption(userAnswers[currentQuestion]);
+            }
+            
+            // Actualizar controles
+            document.getElementById('prev-btn').disabled = currentQuestion === 0;
+            document.getElementById('next-btn').style.display = currentQuestion === questions.length - 1 ? 'none' : 'inline-block';
+            document.getElementById('finish-btn').style.display = currentQuestion === questions.length - 1 ? 'inline-block' : 'none';
+            
+            // Actualizar progreso
+            document.getElementById('progress').textContent = `${currentQuestion + 1}/${questions.length}`;
+            const progressPercent = ((currentQuestion + 1) / questions.length) * 100;
+            document.getElementById('progress-fill').style.width = `${progressPercent}%`;
+            
+            // Ocultar feedback
+            document.getElementById('feedback').style.display = 'none';
+        }
+
+        function selectOption(index) {
+            userAnswers[currentQuestion] = index;
+            
+            // Actualizar UI
+            document.querySelectorAll('.option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            document.querySelectorAll('.option')[index].classList.add('selected');
+            document.getElementById(`option${index}`).checked = true;
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                loadQuestion();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                loadQuestion();
+            }
+        }
+
+        function finishQuiz() {
+            clearInterval(timer);
+            showResults();
+        }
+
+        function showResults() {
+            let correct = 0;
+            for (let i = 0; i < questions.length; i++) {
+                if (userAnswers[i] === questions[i].correct) {
+                    correct++;
+                }
+            }
+            
+            document.getElementById('quiz-content').style.display = 'none';
+            document.querySelector('.controls').style.display = 'none';
+            document.getElementById('results').style.display = 'block';
+            
+            document.getElementById('final-score').textContent = `${correct}/${questions.length}`;
+            document.getElementById('correct-answers').textContent = correct;
+            document.getElementById('total-questions-result').textContent = questions.length;
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            userAnswers = [];
+            timeLeft = 15 * 60;
+            
+            document.getElementById('quiz-content').style.display = 'block';
+            document.querySelector('.controls').style.display = 'flex';
+            document.getElementById('results').style.display = 'none';
+            
+            loadQuestion();
+            startTimer();
+        }
+
+        function reviewAnswers() {
+            // Implementar revisión de respuestas
+            alert('Función de revisión en desarrollo');
+        }
+
+        // Inicializar quiz
+        window.onload = function() {
+            loadQuestion();
+            startTimer();
+        };
+
 // Contenido de testimonios y entrevistas
 const testimonioSilvana = `
   <h2><i class="fas fa-user"></i> Silvana Valderrama – Artes Plásticas 2024-1</h2>
+
+          <h4><iParte 1: práctica</h4>
+          <h4><iParte 2: escrita</h4>
 
             <audio controls>
                 <source src="Silvana1.oga" type="audio/ogg">
@@ -1282,7 +1806,7 @@ const testimonioSilvana = `
                 <li>Prueba general realizada en el campus universitario.</li>
                 <li>"Llegamos como a las 7am al campus".</li>
                 <li>En el correo te especifican los materiales necesarios.</li>
-                <li>Importancia de llegar preparado con todos los materiales solicitados.</li>
+                <li>Importancia de llegar preparado con todos los materiales solicitados (tip de silvana: lleva principalmente materiales que tu manejes, puedes llevar extra a los que te pidieron, posiblemente no uses todos los que te pidieron).</li>
             </ul>
 
             <audio controls>
@@ -1320,6 +1844,8 @@ const testimonioSilvana = `
                 <li><strong>Interpretación:</strong> Mostrar tu forma personal de ver el arte.</li>
             </ul>
         `;
+
+        
 
     </script>
     <!-- Modal de entrevista -->
