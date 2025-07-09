@@ -169,6 +169,11 @@
             margin-bottom: 1rem;
         }
 
+        .card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
         .card p {
             opacity: 0.9;
             line-height: 1.6;
@@ -443,6 +448,186 @@ audio {
   display: block;
   margin: 1em 0;
 }
+
+                /* Testimonials Grid */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .testimonial-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-left: 4px solid #667eea;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-header i {
+            font-size: 2.5rem;
+            color: #667eea;
+        }
+
+        .testimonial-info h4 {
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-preview {
+            font-style: italic;
+            color: #555;
+            margin-top: 1rem;
+        }
+
+        /* Materials Section */
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .material-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #28a745;
+            transition: all 0.3s ease;
+        }
+
+        .material-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .material-item i {
+            color: #28a745;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .material-item h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .material-item p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Discipline specific sections */
+        .discipline-section {
+            border: 2px solid #667eea;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+        }
+
+        .discipline-section h3 {
+            color: #667eea;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1.2rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .close-button:hover {
+            color: #764ba2;
+            transform: rotate(90deg);
+        }
+
+        /* Modal Content Styles */
+        .modal-content h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .modal-content audio {
+            display: block;
+            margin: 1.5rem 0;
+            width: 100%;
+        }
+
+        .modal-content blockquote {
+            font-style: italic;
+            color: #555;
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 4px solid #667eea;
+            background: #f8f9fa;
+            padding: 1rem 1.5rem;
+            border-radius: 5px;
+        }
+
+        .modal-content ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .modal-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
 
 
     </style>
@@ -739,6 +924,234 @@ audio {
         </div>`,
 
         artes: `
+
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <a href="#inicio" class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                UNRoute
+            </a>
+            <nav>
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#materias" class="nav-link">Areas</a>
+                <a href="#tips" class="nav-link">Tips</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+                <a href="#artes" class="nav-link active">Artes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="hero">
+                <h1><i class="fas fa-palette"></i> Pruebas Específicas de Artes</h1>
+                <p>Información clave para quienes desean entrar a programas como Música, Artes Plásticas o Cine.</p>
+            </div>
+
+            <!-- Información General -->
+            <div class="content-section fade-in">
+                <h2><i class="fas fa-info-circle"></i> Información General</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <i class="fas fa-eye"></i>
+                        <h4>¿Qué evalúan?</h4>
+                        <p>Creatividad, técnica, comprensión estética, portafolio.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h4>Preparación previa</h4>
+                        <p>Revisa qué materiales necesitas y cómo presentar tus ideas.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Consejos</h4>
+                        <p>Relájate, expresa tu esencia, ¡y no subestimes tu talento!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Material de Preparación -->
+            <div class="content-section fade-in">
+                <h2><i class="fas fa-book"></i> Material de Preparación</h2>
+                <div class="materials-grid">
+                    <div class="material-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <h4>Guía Oficial UNAL</h4>
+                        <p>Documento oficial con requisitos y criterios de evaluación para cada programa.</p>
+                    </div>
+                    <div class="material-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Cronograma de Preparación</h4>
+                        <p>Timeline sugerido para organizar tu preparación 6 meses antes del examen.</p>
+                    </div>
+                    <div class="material-item">
+                        <i class="fas fa-palette"></i>
+                        <h4>Ejemplos de Portafolios</h4>
+                        <p>Portafolios exitosos de estudiantes admitidos en años anteriores.</p>
+                    </div>
+                    <div class="material-item">
+                        <i class="fas fa-video"></i>
+                        <h4>Tutoriales Paso a Paso</h4>
+                        <p>Videos explicativos sobre técnicas específicas y presentación de trabajos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experiencias Reales -->
+            <div class="content-section fade-in">
+                <h2><i class="fas fa-users"></i> Experiencias Reales</h2>
+                
+                <h3><i class="fas fa-microphone"></i> Entrevistas en Audio</h3>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card" onclick="abrirModal(testimonioSilvana)">
+                        <div class="testimonial-header">
+                            <i class="fas fa-user-circle"></i>
+                            <div class="testimonial-info">
+                                <h4>Silvana Valderrama</h4>
+                                <p>Admitida 2024-1 • Artes Plásticas</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-preview">
+                            "Quieren evaluar tu sensibilidad visual... en la carrera te das cuenta que el arte más que una técnica es aprender a ver"
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card" onclick="abrirModal(testimonioCarlos)">
+                        <div class="testimonial-header">
+                            <i class="fas fa-user-circle"></i>
+                            <div class="testimonial-info">
+                                <h4>Carlos Mendoza</h4>
+                                <p>Admitido 2023-2 • Música</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-preview">
+                            "La prueba técnica es importante, pero lo que realmente evalúan es tu musicalidad y expresión..."
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card" onclick="abrirModal(testimonioLaura)">
+                        <div class="testimonial-header">
+                            <i class="fas fa-user-circle"></i>
+                            <div class="testimonial-info">
+                                <h4>Laura Pérez</h4>
+                                <p>Admitida 2024-1 • Cine y Televisión</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-preview">
+                            "Más que conocimientos técnicos, buscan tu visión narrativa y capacidad de observación..."
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Por Disciplina -->
+            <div class="content-section fade-in">
+                <h2><i class="fas fa-layer-group"></i> Por Disciplina</h2>
+                
+                <div class="discipline-section">
+                    <h3><i class="fas fa-paint-brush"></i> Artes Plásticas</h3>
+                    <div class="materials-grid">
+                        <div class="material-item">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <h4>Técnicas de Dibujo</h4>
+                            <p>Ejercicios de línea, proporción, sombreado y composición.</p>
+                        </div>
+                        <div class="material-item">
+                            <i class="fas fa-folder-open"></i>
+                            <h4>Armado de Portafolio</h4>
+                            <p>Guía para seleccionar y presentar tus mejores trabajos.</p>
+                        </div>
+                        <div class="material-item">
+                            <i class="fas fa-eye"></i>
+                            <h4>Análisis Visual</h4>
+                            <p>Ejercicios de interpretación de obras y composición.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="discipline-section">
+                    <h3><i class="fas fa-music"></i> Música</h3>
+                    <div class="materials-grid">
+                        <div class="material-item">
+                            <i class="fas fa-music"></i>
+                            <h4>Teoría Musical</h4>
+                            <p>Escalas, acordes, ritmo y armonía básica.</p>
+                        </div>
+                        <div class="material-item">
+                            <i class="fas fa-microphone"></i>
+                            <h4>Técnica Vocal/Instrumental</h4>
+                            <p>Ejercicios específicos según tu instrumento principal.</p>
+                        </div>
+                        <div class="material-item">
+                            <i class="fas fa-headphones"></i>
+                            <h4>Entrenamiento Auditivo</h4>
+                            <p>Reconocimiento de intervalos, acordes y patrones rítmicos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="discipline-section">
+                    <h3><i class="fas fa-video"></i> Cine y Televisión</h3>
+                    <div class="materials-grid">
+                        <div class="material-item">
+                            <i class="fas fa-film"></i>
+                            <h4>Narrativa Audiovisual</h4>
+                            <p>Estructura narrativa, guion y lenguaje cinematográfico.</p>
+                        </div>
+                        <div class="material-item">
+                            <i class="fas fa-camera"></i>
+                            <h4>Imagen y Composición</h4>
+                            <p>Planos, movimientos de cámara y composición visual.</p>
+                        </div>
+                        <div class="material-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Proyecto Creativo</h4>
+                            <p>Desarrollo de ideas para cortometrajes o proyectos visuales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consejos de Profesores -->
+            <div class="content-section fade-in">
+                <h2><i class="fas fa-chalkboard-teacher"></i> Consejos de Profesores</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <i class="fas fa-quote-left"></i>
+                        <h4>Prof. Ana Martínez</h4>
+                        <p>"La técnica se puede enseñar, pero la creatividad y la pasión son lo que realmente importa. Muestra tu personalidad en cada trabajo."</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-quote-left"></i>
+                        <h4>Prof. Diego Ruiz</h4>
+                        <p>"No se trata de ser perfecto, sino de demostrar que tienes algo que decir y la capacidad de expresarlo a través del arte."</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-quote-left"></i>
+                        <h4>Prof. Carmen López</h4>
+                        <p>"Practica constantemente, pero también aprende a observar el mundo que te rodea. El arte nace de la observación y la reflexión."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de entrevista -->
+    <div id="modalEntrevista" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button" onclick="cerrarModal()">&times;</span>
+            <div id="modal-body">
+                <!-- Aquí se cargará el contenido dinámicamente -->
+            </div>
+        </div>
+    </div>
+        
         <div class="content-section fade-in">
             <h2><i class="fas fa-palette"></i> Pruebas Específicas de Artes</h2>
             <p style="text-align:center; font-size:1.1rem; margin-bottom:2rem;">
@@ -758,7 +1171,10 @@ audio {
     <i class="fas fa-microphone-alt"></i>
     <h3>Silvana Valderrama - Admitida 2024-1</h3>
     <p>Prueba específica de Artes Plásticas</p>
-</div>`
+</div>
+
+
+`
             
         };
 
@@ -855,39 +1271,55 @@ function cerrarModal() {
 
 // Contenido de testimonios y entrevistas
 const testimonioSilvana = `
-  <h2><i class="fas fa-user"></i> Silvana Valderrana – Artes Plásticas 2024-1</h2>
+  <h2><i class="fas fa-user"></i> Silvana Valderrama – Artes Plásticas 2024-1</h2>
 
-  <audio controls>
-    <source src="Silvana1.oga" type="audio/ogg">
-  </audio>
+            <audio controls>
+                <source src="Silvana1.oga" type="audio/ogg">
+                <p>Tu navegador no soporta audio HTML5.</p>
+            </audio>
 
-  <ul>
-    <li>Prueba general.</li>
-    <li>“Llegamos como a las 7am al campus”.</li>
-    <li>En el correo te piden materiales.</li>
-  </ul>
+            <ul>
+                <li>Prueba general realizada en el campus universitario.</li>
+                <li>"Llegamos como a las 7am al campus".</li>
+                <li>En el correo te especifican los materiales necesarios.</li>
+                <li>Importancia de llegar preparado con todos los materiales solicitados.</li>
+            </ul>
 
-  <audio controls>
-    <source src="Silvana2.oga" type="audio/ogg">
-  </audio>
+            <audio controls>
+                <source src="Silvana2.oga" type="audio/ogg">
+                <p>Tu navegador no soporta audio HTML5.</p>
+            </audio>
 
-  <blockquote>
-    <p>“Quieren evaluar tu sensibilidad visual...”</p>
-    <p>“...en la carrera te das cuenta que el arte más que una técnica es aprender a ver”</p>
-  </blockquote>
+            <blockquote>
+                <p><strong>Sobre la evaluación:</strong></p>
+                <p>"Quieren evaluar tu sensibilidad visual... en la carrera te das cuenta que el arte más que una técnica es aprender a ver"</p>
+            </blockquote>
 
-  <ul>
-    <li>Prueba escrita interpretando una obra.</li>
-  </ul>
+            <ul>
+                <li>Prueba escrita interpretando una obra de arte.</li>
+                <li>Evaluación de capacidad de análisis visual.</li>
+                <li>Importancia de la interpretación personal sobre la técnica.</li>
+            </ul>
 
-  <blockquote>
-    <p>“Una mentalidad relajada te permite presentarte con calma”</p>
-    <p>“...todos se miraban feo en la prueba...ya sabes, la competitividad”</p>
-  </blockquote>
+            <blockquote>
+                <p><strong>Sobre la actitud:</strong></p>
+                <p>"Una mentalidad relajada te permite presentarte con calma"</p>
+                <p>"...todos se miraban feo en la prueba...ya sabes, la competitividad"</p>
+            </blockquote>
 
-  <audio controls>
-    <source src="Silvana3.oga" type="audio/ogg">
-  </audio>`
+            <audio controls>
+                <source src="Silvana3.oga" type="audio/ogg">
+                <p>Tu navegador no soporta audio HTML5.</p>
+            </audio>
+
+            <h3>Puntos Clave:</h3>
+            <ul>
+                <li><strong>Preparación:</strong> Conocer los materiales y llegar temprano.</li>
+                <li><strong>Sensibilidad:</strong> Más importante que la técnica perfecta.</li>
+                <li><strong>Actitud:</strong> Mantener la calma y confianza.</li>
+                <li><strong>Interpretación:</strong> Mostrar tu forma personal de ver el arte.</li>
+            </ul>
+        `;
 
     </script>
     <!-- Modal de entrevista -->
